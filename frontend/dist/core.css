@@ -1,0 +1,84 @@
+/* frontend/dist/core.css */
+:root {
+    --bg: #0b0f17;
+    --card: #121a27;
+    --text: #e8eef9;
+    --muted: #a2b2c8;
+    --accent: #62a7ff;
+    --border: rgba(255,255,255,0.10);
+}
+
+* { box-sizing: border-box;}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+
+}
+
+.container{
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 24px 14px 40px
+}
+
+h1 {margin: 0 0 6px; font-size: 24px; }
+h2 { margin: 0 0 10px; font-size: 16px; }
+h3 { margin: 0 0 8px; font-size: 14px; }
+
+.muted { color: var(--muted); }
+
+.card{
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 14px;
+    margin: 12px 0;
+}
+
+.buttons{
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+
+button { cursor: pointer;}
+button.primary{
+    background: var(--accent);
+    color: #07111f;
+    font-weight:650;
+    border: 0;
+}
+button:disabled { opacity: 0.6; cursor: not-allowed};
+
+.status{
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.preview-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px
+}
+
+@media (min-width: 880px) {
+    .preview-grid{ grid-template-columns: 1fr 1fr; }
+}
+
+.preview {
+    margin: 0;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: rgba(0,0,0,0.25);
+    overflow: auto;
+    max-height: 260px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 12px;
+    white-space: pre;
+}
